@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     -name: Baixar Código do Repositório
+    - name: Baixar Código do Repositório
       uses: actions/checkout@v4
     
