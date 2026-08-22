@@ -28,8 +28,16 @@ jobs:
     steps:
      - run: echo "rodando em paralelo"
 
+    
+  
   deploy:
     needs: [teste, paralelo]
     runs-on: ubuntu-latest
     steps:
      - run: echo "Deploy realizado"
+
+  codependencia:
+    needs: [deploy, paralelo]
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "gerar linhas"
