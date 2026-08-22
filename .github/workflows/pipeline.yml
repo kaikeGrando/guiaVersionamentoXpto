@@ -16,8 +16,13 @@ jobs:
       with:
         python-version: '3.12'
 
+  paralelo:
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "rodando em paralelo"
+
   deploy:
-    needs: teste
+    needs: [teste, paralelo]
     runs-on: ubuntu-latest
     steps:
      - run: echo "Deploy realizado"
