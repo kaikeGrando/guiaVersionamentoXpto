@@ -15,3 +15,9 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.12'
+
+  deploy:
+    needs: teste
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "Deploy realizado"
