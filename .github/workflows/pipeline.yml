@@ -16,6 +16,42 @@ jobs:
 
     - run: "node test_sum"
 
+  teste_div:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar Código do Repositório
+      uses: actions/checkout@v4
+    
+    - name: Configurar node
+      uses: actions/setup-node@v7
+
+    - run: "node test_div"
+
+  teste_sub:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar Código do Repositório
+      uses: actions/checkout@v4
+    
+    - name: Configurar node
+      uses: actions/setup-node@v7
+
+    - run: "node test_sub"
+
+  teste_mult:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar Código do Repositório
+      uses: actions/checkout@v4
+    
+    - name: Configurar node
+      uses: actions/setup-node@v7
+
+    - run: "node test_mul"
+
   deploy:
     needs: [teste_soma]
     runs-on: ubuntu-latest
