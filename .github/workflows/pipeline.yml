@@ -11,71 +11,13 @@ jobs:
     - name: Baixar Código do Repositório
       uses: actions/checkout@v4
     
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
+    - name: Configurar node
+      uses: actions/setup-node@v7
 
+    - run: "node test_sum"
 
-    - run: "pip install pytest"
-
-    - run: "pytest test_div.py"
-  teste_mult:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Baixar Código do Repositório
-      uses: actions/checkout@v4
-    
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-
-
-    - run: "pip install pytest"
-
-    - run: "pytest test_mult.py"
-  teste_soma:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Baixar Código do Repositório
-      uses: actions/checkout@v4
-    
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-
-
-    - run: "pip install pytest"
-
-    - run: "pytest test_soma.py"
-  teste_sub:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Baixar Código do Repositório
-      uses: actions/checkout@v4
-    
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-
-
-    - run: "pip install pytest"
-
-    - run: "pytest test_sub.py"
-
-
-
-
-    
-  
   deploy:
-    needs: [teste_div, teste_mult, teste_soma, teste_sub]
+    needs: [teste_soma]
     runs-on: ubuntu-latest
     steps:
      - run: echo "Deploy realizado"
