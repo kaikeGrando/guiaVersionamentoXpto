@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
 jobs:
-  teste_div:
+  teste_soma:
     runs-on: ubuntu-latest
 
     steps:
