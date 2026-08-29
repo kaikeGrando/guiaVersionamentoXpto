@@ -19,7 +19,7 @@ jobs:
 
     - run: "pip install pytest"
 
-    - run: "pytest test_div"
+    - run: "pytest test_div.py"
   teste_mult:
     runs-on: ubuntu-latest
 
@@ -35,7 +35,7 @@ jobs:
 
     - run: "pip install pytest"
 
-    - run: "pytest test_mult"
+    - run: "pytest test_mult.py"
   teste_soma:
     runs-on: ubuntu-latest
 
@@ -51,7 +51,7 @@ jobs:
 
     - run: "pip install pytest"
 
-    - run: "pytest test_soma"
+    - run: "pytest test_soma.py"
   teste_sub:
     runs-on: ubuntu-latest
 
@@ -67,7 +67,7 @@ jobs:
 
     - run: "pip install pytest"
 
-    - run: "pytest test_sub"
+    - run: "pytest test_sub.py"
 
 
 
