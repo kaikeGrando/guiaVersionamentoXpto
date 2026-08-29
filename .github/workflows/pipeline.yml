@@ -53,7 +53,7 @@ jobs:
     - run: "node test_mul"
 
   deploy:
-    needs: [teste_soma]
+    needs: [teste_soma, teste_div, teste_mult, teste_sub]
     runs-on: ubuntu-latest
     steps:
      - run: echo "Deploy realizado"
